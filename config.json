@@ -1,0 +1,16 @@
+{
+  "templates":[
+    {
+      "name": "index",
+      "languages": ["es", "en"]
+    },
+    {
+      "name": "about",
+      "languages": ["es", "en"]
+    }
+  ],
+  "assets_url": "../images/",
+  "styles_url": "../styles/",
+  "javascript_url": "../js/",
+  "prettify": false
+}

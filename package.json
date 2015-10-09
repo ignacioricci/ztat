@@ -1,0 +1,15 @@
+{
+  "name": "ztat",
+  "version": "0.0.0",
+  "description": "",
+  "main": "generator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ignacio Ricci (ignacio.ricci@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "jade": "1.11.0",
+    "mkdirp": "0.5.1"
+  }
+}

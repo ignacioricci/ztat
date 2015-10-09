@@ -1,0 +1,11 @@
+html(lang=current_language)
+  head
+    meta(charset='utf-8')
+    title= page_title
+    link(rel="stylesheet", type="text/css", href="#{styles_url}index.css")
+  body
+    h1= page_title
+    p= tagline
+    p
+      img(src="#{assets_url}/doge.jpg", alt="Doge")
+    script(type="text/javascript", src="#{javascript_url}index.js")
