@@ -9,6 +9,7 @@
       "languages": ["es", "en"]
     }
   ],
+  "default_language": "en",
   "assets_url": "../images/",
   "styles_url": "../styles/",
   "javascript_url": "../js/",

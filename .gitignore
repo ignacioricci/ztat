@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 www/es
 www/en
+www/about
+www/index.html

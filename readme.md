@@ -43,6 +43,10 @@ node generator.js
     }
   ],
 ```
+### default_language
+```
+"default_language": "en"
+```
 ### assets_url
 ```
 "assets_url": "../images/"

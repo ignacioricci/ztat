@@ -26,7 +26,12 @@ data.templates.forEach(function(template){
     locals.javascript_url = data.javascript_url;
     locals.current_language = lang;
 
-    var directory = __dirname + '/www/' + lang + '/';
+    if (data.default_language == lang){
+      var directory = __dirname + '/www/';
+    }
+    else {
+      var directory = __dirname + '/www/' + lang + '/';
+    }
     if (name !== 'index'){
       directory += name + '/';
     }
