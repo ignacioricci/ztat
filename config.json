@@ -10,8 +10,8 @@
     }
   ],
   "default_language": "en",
-  "assets_url": "../images/",
-  "styles_url": "../styles/",
-  "javascript_url": "../js/",
-  "prettify": false
+  "assets_url": "images",
+  "styles_url": "styles",
+  "javascript_url": "js",
+  "development": true
 }

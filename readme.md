@@ -59,9 +59,9 @@ node generator.js
 ```
 "javascript_url": "../js/"
 ```
-### prettify (false for minified)
+### development (Does not minify and resolves relative URL's)
 ```
-"prettify": false
+"development": true
 ```
 
 ## With ❤ by

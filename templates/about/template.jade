@@ -2,7 +2,7 @@ html(lang=current_language)
   head
     meta(charset='utf-8')
     title= page_title
-    link(rel="stylesheet", type="text/css", href="../#{styles_url}index.css")
+    link(rel="stylesheet", type="text/css", href="#{styles_url}index.css")
   body
     h1= page_title
     ul
@@ -13,4 +13,4 @@ html(lang=current_language)
             | 
             em= member.position
           p= member.twitter_handle
-    script(type="text/javascript", src="../#{javascript_url}index.js")
+    script(type="text/javascript", src="#{javascript_url}index.js")
