@@ -10,6 +10,9 @@
   "license": "MIT",
   "dependencies": {
     "jade": "1.11.0",
-    "mkdirp": "0.5.1"
+    "mkdirp": "0.5.1",
+    "node-sass": "3.3.3",
+    "chokidar": "1.2.0",
+    "colors": "1.1.2"
   }
 }

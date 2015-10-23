@@ -35,11 +35,17 @@ node generator.js
 "templates":[
     {
       "name": "index",
-      "languages": ["es", "en"]
+      "languages": {
+        "en": "index",
+        "es": "index"
+      }
     },
     {
       "name": "about",
-      "languages": ["es", "en"]
+      "languages": {
+        "en": "about",
+        "es": "sobre-nosotros"
+      }
     }
   ],
 ```
@@ -47,21 +53,37 @@ node generator.js
 ```
 "default_language": "en"
 ```
-### assets_url
+### output_dir
 ```
-"assets_url": "../images/"
+"output_dir": "/www/",
 ```
-### styles_url
+### assets_dir
 ```
-"styles_url": "../styles/"
+"assets_dir": "/www/images/",
 ```
-### javascript_url
+### css_url
 ```
-"javascript_url": "../js/"
+"css_dir": "/www/styles/css/",
 ```
-### development (Does not minify and resolves relative URL's)
+### sass_url
 ```
-"development": true
+"sass_dir": "/www/styles/scss/",
+```
+### javascript_dir
+```
+"javascript_dir": "../js/"
+```
+### fonts_dir
+```
+"fonts_dir": "../js/"
+```
+### relative_urls (Builds local paths for files)
+```
+"relative_urls": true,
+```
+### pretty (On true minifies HTML and SASS)
+```
+"pretty": false
 ```
 
 ## With ❤ by
@@ -71,7 +93,7 @@ node generator.js
  - Twitter: [@ignacioricci](http://twitter.com/ignacioricci)
  - Web: [http://ignacioricci.com](http://ignacioricci.com)
 
-Special thanks to: <a href="http://twitter.com/impronunciable">Dan Zajdband</a>.
+Special thanks to: <a href="http://twitter.com/impronunciable">Dan Zajdband</a> and Guillermo Paz <a href="http://twitter.com/pazguille">Guillermo Paz</a>.
 
 ## License
 MIT license. Copyright © 2015 [Ignacio Ricci](http://ignacioricci.com).

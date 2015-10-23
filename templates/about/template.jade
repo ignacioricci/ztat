@@ -1,16 +1,14 @@
-html(lang=current_language)
-  head
-    meta(charset='utf-8')
-    title= page_title
-    link(rel="stylesheet", type="text/css", href="#{styles_url}index.css")
-  body
-    h1= page_title
-    ul
-      each member in team_members
-        li
-          h2
-            strong= member.name
-            | 
-            em= member.position
-          p= member.twitter_handle
-    script(type="text/javascript", src="#{javascript_url}index.js")
+include ./../includes/header.jade
+
+body
+  h1= page_title
+  ul
+    each member in team_members
+      li
+        h2
+          strong= member.name
+          | 
+          em= member.position
+        p= member.twitter_handle
+  p
+    a(href=page_link('index')) Index

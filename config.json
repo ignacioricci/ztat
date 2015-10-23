@@ -2,16 +2,26 @@
   "templates":[
     {
       "name": "index",
-      "languages": ["es", "en"]
+      "languages": {
+        "en": "index",
+        "es": "index"
+      }
     },
     {
       "name": "about",
-      "languages": ["es", "en"]
+      "languages": {
+        "en": "about",
+        "es": "sobre-nosotros"
+      }
     }
   ],
   "default_language": "en",
-  "assets_url": "images",
-  "styles_url": "styles",
-  "javascript_url": "js",
-  "development": true
+  "output_dir": "/www/",
+  "assets_dir": "/www/images/",
+  "css_dir": "/www/styles/css/",
+  "sass_dir": "/www/styles/scss/",
+  "fonts_dir": "/www/fonts/",
+  "javascript_dir": "/www/js/",
+  "relative_urls": true,
+  "pretty": true
 }
