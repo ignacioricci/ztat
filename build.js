@@ -64,6 +64,7 @@ exports.renderJade = function(){
       // Generate automatic page links
       locals.page_link = function(name){
        
+        var root = '/' + data.output_dir + '/';
         var page = data.templates.filter(function(t){return t.name === name});
         page = page[0].languages[lang];
             
@@ -74,10 +75,10 @@ exports.renderJade = function(){
           return page;
         }
         else if (name == 'index' && data.default_language != lang){
-          return '/' + data.output_dir + '/' + lang + '/';
+          return (data.output_dir == '' ? '' : root) + lang + '/';
         }
         else {
-          return '/' + data.output_dir + '/';
+          return (data.output_dir == '' ? '' : root);
         }
       };
 
