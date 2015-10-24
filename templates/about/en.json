@@ -1,5 +1,6 @@
 {
   "page_title": "About page (EN)",
+  "copyright": "My site, all rights reserved",
   "team_members": [
     {"name": "John Doe", "position": "CEO", "twitter_handle": "@johndoe"},
     {"name": "Jane Doe", "position": "CFO", "twitter_handle": "@janedoe"}
