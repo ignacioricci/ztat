@@ -1,0 +1,13 @@
+html(lang=current_language)
+  head
+    base(href=base_url)
+    meta(charset='utf-8')
+    title= page_title
+    link(rel="stylesheet", type="text/css", href="#{css_dir}index.css")
+  body
+    
+    block body
+
+    block footer
+      footer.footer
+        p= copyright

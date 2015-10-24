@@ -5,8 +5,12 @@ var build = require('./build.js');
 var chokidar = require('chokidar');
 var colors = require('colors');
 
-// Load config
+// Get config
 var data = require('./config.json');
+
+// Render for the first time before watching
+build.renderJade();
+build.renderSass()
 
 // Watcher
 function watcher(type, fn){

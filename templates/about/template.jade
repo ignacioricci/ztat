@@ -1,6 +1,7 @@
-include ./../includes/header.jade
+extends ./../../layout/layout.jade
 
-body
+block body
+
   h1= page_title
   ul
     each member in team_members

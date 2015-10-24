@@ -16,12 +16,13 @@
     }
   ],
   "default_language": "en",
-  "output_dir": "/www/",
-  "assets_dir": "/www/images/",
-  "css_dir": "/www/styles/css/",
-  "sass_dir": "/www/styles/scss/",
-  "fonts_dir": "/www/fonts/",
-  "javascript_dir": "/www/js/",
+  "base_url": "http://localhost:3000/www/",
+  "output_dir": "www",
+  "assets_dir": "images",
+  "css_dir": "styles/css",
+  "sass_dir": "styles/scss",
+  "fonts_dir": "fonts",
+  "javascript_dir": "js",
   "relative_urls": true,
   "pretty": true
 }
