@@ -26,7 +26,6 @@ exports.renderJade = function(){
     function getLang(lang, url){
       var locals = {};
       var i18n_t = require(__dirname + '/templates/' + tempName + '/' + lang + '.json');
-      var i18n_l = require(__dirname + '/layout/' + lang + '.json');
 
       // Save template strings
       for(var i in i18n_t) {
@@ -34,8 +33,11 @@ exports.renderJade = function(){
       }
 
       // Save layout strings
-      for(var i in i18n_l) {
-        locals[i] = i18n_l[i];
+      if(data.use_layout === true){
+        var i18n_l = require(__dirname + '/templates/layout/' + lang + '.json');
+        for(var i in i18n_l) {
+          locals[i] = i18n_l[i];
+        }
       }
 
       // Build output paths

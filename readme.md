@@ -63,6 +63,13 @@ Indicates the template list, their languages and URL's
     }
   ],
 ```
+#### use_layout *(boolean)*
+
+Defines wether to use a layout or not. **The layout is not compiled.**
+
+```
+"use_layout": true
+```
 #### default_language *(string)*
 
 Defines the default language. This language will compile on the root of the output folder.

@@ -15,6 +15,7 @@
       }
     }
   ],
+  "use_layout": true,
   "default_language": "en",
   "base_url": "http://localhost:3000/www/",
   "output_dir": "www",
