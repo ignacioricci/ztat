@@ -23,6 +23,5 @@
   "sass_dir": "styles/scss",
   "fonts_dir": "fonts",
   "javascript_dir": "js",
-  "relative_urls": true,
   "pretty": true
 }

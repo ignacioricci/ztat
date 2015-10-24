@@ -51,6 +51,7 @@ exports.renderJade = function(){
       locals.fonts_dir = locals.base_url + data.fonts_dir + '/';
       locals.javascript_dir = locals.base_url + data.javascript_dir + '/';
       locals.current_language = lang;
+      locals.current_page = tempName;
 
       // Generate automatic page links
       locals.page_link = function(name){

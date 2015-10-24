@@ -61,11 +61,11 @@ node generator.js
 ```
 "assets_dir": "/www/images/",
 ```
-### css_url
+### css_dir
 ```
 "css_dir": "/www/styles/css/",
 ```
-### sass_url
+### sass_dir
 ```
 "sass_dir": "/www/styles/scss/",
 ```
@@ -77,14 +77,33 @@ node generator.js
 ```
 "fonts_dir": "../js/"
 ```
-### relative_urls (Builds local paths for files)
-```
-"relative_urls": true,
-```
 ### pretty (On true minifies HTML and SASS)
 ```
 "pretty": false
 ```
+
+## You can also use the following variables and function on your template
+
+### Variables
+
+* output_dir
+* assets_dir
+* css_dir
+* sass_dir
+* javascript_dir
+* fonts_dir
+
+* current_page
+* current_language
+
+### Functions
+
+```
+page_link('page-name')
+```
+
+Automatically builds page links for all languages
+
 
 ## With ❤ by
 
