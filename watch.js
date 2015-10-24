@@ -16,8 +16,7 @@ build.renderSass()
 function watcher(type, fn){
   var types = {
     'jade': __dirname + '/templates/',
-    'sass': __dirname + '/' + data.output_dir + '/' + data.sass_dir + '/',
-    'layout': __dirname + '/layout/'
+    'sass': __dirname + '/' + data.output_dir + '/' + data.sass_dir + '/'
   };
   chokidar
     .watch([types[type]], {persistent: true})
@@ -34,7 +33,6 @@ function watcher(type, fn){
 // Run watch
 watcher('jade', build.renderJade);
 watcher('sass', build.renderSass);
-watcher('layout', '');
 
 // Print errors
 process.on('uncaughtException', function(err) {
