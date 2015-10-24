@@ -153,7 +153,7 @@ Defines wether the output will be minified or not.
 Creates an hyperlink URL to be used inside the *href* of **&lt;/a&gt;** tags.
 
 ```
-page_link('page-name')
+a(href=page_link('about')) About
 ```
 
 It will automatically adjust the url according to the ``current_language``
