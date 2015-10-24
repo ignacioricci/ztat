@@ -45,17 +45,17 @@ exports.renderJade = function(){
 
       // Set variables
       locals.base_url = data.base_url;
-      locals.assets_dir = data.assets_dir;
-      locals.css_dir = data.css_dir;
-      locals.sass_dir = data.sass_dir;
-      locals.fonts_dir = data.fonts_dir;
-      locals.javascript_dir = data.javascript_dir;
+      locals.assets_dir = locals.base_url + data.assets_dir + '/';
+      locals.css_dir = locals.base_url + data.css_dir + '/';
+      locals.sass_dir = locals.base_url + data.sass_dir + '/';
+      locals.fonts_dir = locals.base_url + data.fonts_dir + '/';
+      locals.javascript_dir = locals.base_url + data.javascript_dir + '/';
       locals.current_language = lang;
 
       // Generate automatic page links
       locals.page_link = function(name){
        
-        var page = data.templates.filter(function(t){return t.name === 'about'});
+        var page = data.templates.filter(function(t){return t.name === name});
         page = page[0].languages[lang];
             
         if (name != 'index' && data.default_language != lang){
