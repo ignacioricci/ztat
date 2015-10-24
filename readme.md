@@ -1,25 +1,38 @@
 # Ztat
-> A simple static website generator for NodeJS
+> A simple i18n static website generator for NodeJS
+
+This framework is based on <a href="http://jade-lang.com/">Jade's</a> templating system and SASS.
 
 ## Prerequisites
 
-NodeJS, NPM.
+* <a href="https://nodejs.org/en/">NodeJS</a>
+* <a href="https://www.npmjs.com/">NPM</a>
 
-## Installation
+## Installation and usage
+
+### Installation
 
 1. Download the repository
 2. **npm-install** dependencies
 
-## Usage
+### Usage
 
-Run in your console:
+To compile Jade or SASS just one time use in the **command line**:
 
 ```
 node generator.js
 ```
 
+To run a watcher waiting for changes use in the **command line**:
+
+```
+node watch.js
+```
+
 ## Directory structure
 
+- layout
+  - layout.jade
 - templates/
   - section_name/
      - template.jade
@@ -29,7 +42,8 @@ node generator.js
 
 ## Configuration options
 
-### templates
+#### templates *(object)*
+Indicates the template list, their languages and URL's
 
 ```
 "templates":[
@@ -49,61 +63,100 @@ node generator.js
     }
   ],
 ```
-### default_language
+#### default_language *(string)*
+
+Defines the default language. This language will compile on the root of the output folder.
+
 ```
 "default_language": "en"
 ```
-### output_dir
+### base_url *(string)*
+
+The base URL for the website navigation
+
 ```
-"output_dir": "/www/",
+http://localhost:3000/www/
 ```
-### assets_dir
+
+### output_dir *(string)*
+
+The output directory
+
 ```
-"assets_dir": "/www/images/",
+"output_dir": "www"
 ```
-### css_dir
+### assets_dir *(string)*
+
+The asset's directory inside the output directory
+
 ```
-"css_dir": "/www/styles/css/",
+"assets_dir": "images"
 ```
-### sass_dir
+### css_dir *(string)*
+
+The css directory inside the output directory
+
 ```
-"sass_dir": "/www/styles/scss/",
+"css_dir": "styles/css"
 ```
-### javascript_dir
+### sass_dir *(string)*
+
+The SASS directory inside the output directory
+
 ```
-"javascript_dir": "../js/"
+"sass_dir": "styles/scss"
 ```
-### fonts_dir
+### javascript_dir *(string)*
+
+The javascript's directory inside the output directory
+
 ```
-"fonts_dir": "../js/"
+"javascript_dir": "js"
 ```
-### pretty (On true minifies HTML and SASS)
+### fonts_dir *(string)*
+
+The font's directory inside the output directory
+
+```
+"fonts_dir": "fonts"
+```
+### pretty *(boolean)*
+
+Defines wether the output will be minified or not.
+**On true: minifies HTML and SASS.**
+
 ```
 "pretty": false
 ```
 
-## You can also use the following variables and function on your template
+## Variables and functions for templates
 
-### Variables
+### Variables from configuration
 
-* output_dir
-* assets_dir
-* css_dir
-* sass_dir
-* javascript_dir
-* fonts_dir
+* ``default_language``
+* ``output_dir``
+* ``assets_dir``
+* ``css_dir``
+* ``sass_dir``
+* ``javascript_dir``
+* ``fonts_dir``
 
-* current_page
-* current_language
+### Other variables
+
+* ``current_page`` *(Returns current page name)*
+* ``current_language`` *(Returns current language)*
 
 ### Functions
+
+#### page_link('*name*')
+
+Creates an hyperlink URL to be used inside the *href* of **&lt;/a&gt;** tags.
 
 ```
 page_link('page-name')
 ```
 
-Automatically builds page links for all languages
-
+It will automatically adjust the url according to the ``current_language``
 
 ## With ❤ by
 
@@ -112,7 +165,7 @@ Automatically builds page links for all languages
  - Twitter: [@ignacioricci](http://twitter.com/ignacioricci)
  - Web: [http://ignacioricci.com](http://ignacioricci.com)
 
-Special thanks to: <a href="http://twitter.com/impronunciable">Dan Zajdband</a> and Guillermo Paz <a href="http://twitter.com/pazguille">Guillermo Paz</a>.
+Special thanks to: <a href="http://twitter.com/impronunciable">Dan Zajdband</a> and <a href="http://twitter.com/pazguille">Guillermo Paz</a>.
 
 ## License
 MIT license. Copyright © 2015 [Ignacio Ricci](http://ignacioricci.com).
