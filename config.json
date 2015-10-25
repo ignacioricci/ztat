@@ -17,7 +17,7 @@
   ],
   "use_layout": true,
   "default_language": "en",
-  "base_url": "http://ignacioricci.github.io/lightning-dogs/",
+  "base_url": "http://localhost:3000/www/",
   "output_dir": "www",
   "assets_dir": "images",
   "css_dir": "styles/css",
