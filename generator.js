@@ -5,6 +5,6 @@ var build = require('./build.js');
 
 // Render
 build.renderJade();
-console.log('Build succeed for Jade templates...'.green)
+console.log('Build succeeded for Jade templates...'.green)
 build.renderSass()
-console.log('Build succeed for SASS templates...'.green)
+console.log('Build succeeded for SASS templates...'.green)

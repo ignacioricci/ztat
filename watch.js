@@ -9,7 +9,9 @@ var data = require('./config.json');
 
 // Render for the first time before watching
 build.renderJade();
+console.log('Build succeeded for Jade templates...'.green)
 build.renderSass()
+console.log('Build succeeded for SASS templates...'.green)
 
 // Watcher
 function watcher(type, fn){
@@ -24,7 +26,7 @@ function watcher(type, fn){
       if (fn != ''){
         fn();
       }
-      console.log('Build succeed for ' + type.green + ' (' + path.gray + ')');
+      console.log('Build succeeded for ' + type.green + ' (' + path.gray + ')');
       console.log('Watching ' + type.yellow + ' templates...');
     });
 }
