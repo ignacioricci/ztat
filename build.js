@@ -81,10 +81,10 @@ exports.renderJade = function(){
           return page;
         }
         else if (name == 'index' && data.default_language != lang){
-          return outputDir + lang + '/';
+          return data.base_url + lang + '/';
         }
         else {
-          return outputDir;
+          return data.base_url;
         }
       };
 
