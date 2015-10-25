@@ -31,9 +31,11 @@ node watch.js
 
 ## Directory structure
 
-- layout
-  - layout.jade
 - templates/
+  - layout
+    - en.json
+    - es.json
+    - xx.json
   - section_name/
      - template.jade
      - en.json
