@@ -6,9 +6,16 @@ var child_process = require('child_process');
 var jade = require('jade');
 var mkdirp = require('mkdirp');
 var sass = require('node-sass');
+var colors = require('colors');
 
 // Get config
 var data = require('./config.json');
+
+// Set output directory
+var outputDir = '/' + data.output_dir + '/';
+if (outputDir == '//'){
+  outputDir = '/';
+}
 
 // Render Jade
 exports.renderJade = function(){
@@ -42,10 +49,10 @@ exports.renderJade = function(){
 
       // Build output paths
       if (data.default_language == lang){
-        var outputPath = __dirname + '/' + data.output_dir + '/';
+        var outputPath = __dirname + outputDir;
       }
       else {
-        var outputPath = __dirname + '/' + data.output_dir + '/' + lang + '/';
+        var outputPath = __dirname + outputDir + lang + '/';
       }
       if (tempName !== 'index'){
         outputPath += url + '/';
@@ -64,7 +71,6 @@ exports.renderJade = function(){
       // Generate automatic page links
       locals.page_link = function(name){
        
-        var root = '/' + data.output_dir + '/';
         var page = data.templates.filter(function(t){return t.name === name});
         page = page[0].languages[lang];
             
@@ -75,10 +81,10 @@ exports.renderJade = function(){
           return page;
         }
         else if (name == 'index' && data.default_language != lang){
-          return (data.output_dir == '' ? '' : root) + lang + '/';
+          return outputDir + lang + '/';
         }
         else {
-          return (data.output_dir == '' ? '' : root);
+          return outputDir;
         }
       };
 
@@ -114,18 +120,21 @@ exports.renderSass = function(){
   }
 
   // Get CSS
-  var css = sass.renderSync({
-    file: __dirname + '/' + data.output_dir + '/' + data.sass_dir + '/index.scss',
+  sass.render({
+    file: __dirname + outputDir + data.sass_dir + '/index.scss',
     outputStyle: outputStyle
-  });
-
-  // Create the directory if it doesn't exist
-  mkdirp(__dirname + '/' + data.output_dir + '/' + data.css_dir, function(err){
-    if (err) {
-      console.error(err);
-    } else {
-      // Create the files
-      fs.writeFileSync(__dirname + '/' + data.output_dir + '/' + data.css_dir + '/index.css', css.css, 'utf8');
+  }, function(err, css) {
+    if (err){
+      console.log('Error: index.scss on path: '.red + __dirname.red + outputDir.red + data.sass_dir.red + ' does not exist! Please create it and run the command again.'.red);
+    }
+    else {
+      mkdirp(__dirname + outputDir + data.css_dir, function(err){
+        if (err) {
+          console.error(err);
+        } else {
+          fs.writeFileSync(__dirname + outputDir + data.css_dir + '/index.css', css.css, 'utf8');
+        }
+      });
     }
   });
   

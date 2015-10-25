@@ -3,7 +3,6 @@
 // Require dependencies
 var build = require('./build.js');
 var chokidar = require('chokidar');
-var colors = require('colors');
 
 // Get config
 var data = require('./config.json');
