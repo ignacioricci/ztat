@@ -126,6 +126,7 @@ exports.renderSass = function(){
   }, function(err, css) {
     if (err){
       console.log('Error: index.scss on path: '.red + __dirname.red + outputDir.red + data.sass_dir.red + ' does not exist! Please create it and run the command again.'.red);
+      console.log(err);
     }
     else {
       mkdirp(__dirname + outputDir + data.css_dir, function(err){
