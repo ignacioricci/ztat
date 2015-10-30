@@ -1,0 +1,1 @@
+> This is quote done with markdown

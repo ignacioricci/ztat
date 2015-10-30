@@ -5,4 +5,9 @@ block body
   h1= page_title
   p= tagline
 
+  if current_language == 'es'
+    include:marked es.md
+  else if current_language == 'en'
+    include:marked en.md
+
   a(href=page_link('about')) About
