@@ -121,11 +121,11 @@ exports.renderSass = function(){
 
   // Get CSS
   sass.render({
-    file: __dirname + outputDir + data.sass_dir + '/index.scss',
+    file: __dirname + outputDir + data.sass_dir + '/index.' + data.sass_type,
     outputStyle: outputStyle
   }, function(err, css) {
     if (err){
-      console.log('Error: index.scss on path: '.red + __dirname.red + outputDir.red + data.sass_dir.red + ' does not exist! Please create it and run the command again.'.red);
+      console.log('Error: index.' + data.sass_type + ' on path: '.red + __dirname.red + outputDir.red + data.sass_dir.red + ' does not exist! Please create it and run the command again.'.red);
       console.log(err);
     }
     else {

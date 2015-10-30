@@ -18,6 +18,7 @@
   "use_layout": true,
   "default_language": "en",
   "base_url": "http://localhost:3000/www/",
+  "sass_type": "scss",
   "output_dir": "www",
   "assets_dir": "images",
   "css_dir": "styles/css",

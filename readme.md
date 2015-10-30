@@ -85,7 +85,15 @@ Defines the default language. This language will compile on the root of the outp
 The base URL for the website navigation
 
 ```
-http://localhost:3000/www/
+"base_url": "http://localhost:3000/www/",
+```
+
+### sass_type *(string)*
+
+The type of sass you want to use. Options: "scss" or "sass".
+
+```
+"sass_type": "scss"
 ```
 
 ### output_dir *(string)*
