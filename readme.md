@@ -1,6 +1,8 @@
 # Ztat
 > A simple i18n static website generator for NodeJS
 
+[![NPM version][npm-image]][npm-link]
+
 This framework is based on <a href="http://jade-lang.com/">Jade's</a> templating system and SASS.
 
 ## Prerequisites
@@ -187,3 +189,6 @@ Special thanks to: <a href="http://twitter.com/impronunciable">Dan Zajdband</a> 
 
 ## License
 MIT license. Copyright © 2015 [Ignacio Ricci](http://ignacioricci.com).
+
+[npm-image]: https://img.shields.io/npm/v/ztat.svg?style=flat
+[npm-link]: https://npmjs.org/package/ztat

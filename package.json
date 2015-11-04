@@ -1,14 +1,20 @@
 {
   "name": "ztat",
-  "version": "0.0.0",
-  "description": "",
-  "main": "generator.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "repository": "git@github.com:ignacioricci/ztat.git",
+  "description": "A simple i18n static website generator for NodeJS",
   "author": "Ignacio Ricci (ignacio.ricci@gmail.com)",
+  "version": "0.0.1",
+  "keywords": [
+    "static",
+    "website",
+    "generator",
+    "ztat"
+  ],
+  "scripts": {
+    "build": "node generator.js"
+  },
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "jade": "1.11.0",
     "mkdirp": "0.5.1",
     "node-sass": "3.3.3",
