@@ -12,20 +12,6 @@
       "languages": {
         "en": "about",
         "es": "sobre-nosotros"
-      },
-      "templates": {
-        "name": "john-doe",
-        "languages": {
-          "en": "john-doe",
-          "es": "juan-x"
-        },
-        "templates": {
-          "name": "johns-dog",
-          "laguages": {
-            "en": "johns-dog",
-            "es": "el-perro-de-juan"
-          }
-        }
       }
     }
   ],
